@@ -1,22 +1,26 @@
 import './App.css';
 
-function SampleInput(props) {
+function ComponentOne(props) {
   return (
-    <div>
-      <label>{props.label}</label><br />
-      <input type="text" id={props.fieldName} name={props.fieldName}></input>
-      <hr />
+    <div style={{ backgroundColor: 'green', width: '50%', margin: '5px' }}>
+      I'm green component
     </div>
-  )
+  );
+}
+
+function ComponentTwo(props) {
+  return (
+    <div style={{ backgroundColor: 'yellow', width: '50%', margin: '5px' }}>
+      I'm yellow component
+    </div>
+  );
 }
 
 function App() {
   return (
-    <div style={{ width: "200px" }}>
-      <h1>Some form</h1>
-      <SampleInput fieldName="fname" label="First name:" />
-      <SampleInput fieldName="lname" label="Last name:" />
-      <SampleInput fieldName="phoneNumber" label="Phone number:" />
+    <div >
+      <ComponentOne />
+      <ComponentTwo />
     </div>
   );
 }
