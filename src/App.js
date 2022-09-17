@@ -1,19 +1,10 @@
 import './App.css';
 
-function UserJan() {
+function User(props) {
   return (
     <div>
-      <span>Name is: Jan </span>
-      <span>Age is: 25</span>
-    </div>
-  );
-}
-
-function UserAnna() {
-  return (
-    <div>
-      <span>Name is: Anna </span>
-      <span>Age is: 42</span>
+      <span>Name is: {props.name} </span>
+      <span>Age is: {props.age}</span>
     </div>
   );
 }
@@ -21,8 +12,8 @@ function UserAnna() {
 function App() {
   return (
     <div >
-      <UserJan />
-      <UserAnna />
+      <User name="Jan" age="25" />
+      <User name="Anna" age="42" />
     </div>
   );
 }
