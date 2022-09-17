@@ -1,17 +1,19 @@
 import './App.css';
 
-function ComponentOne(props) {
+function UserJan() {
   return (
-    <div style={{ backgroundColor: 'green', width: '50%', margin: '5px' }}>
-      I'm green component
+    <div>
+      <span>Name is: Jan </span>
+      <span>Age is: 25</span>
     </div>
   );
 }
 
-function ComponentTwo(props) {
+function UserAnna() {
   return (
-    <div style={{ backgroundColor: 'yellow', width: '50%', margin: '5px' }}>
-      I'm yellow component
+    <div>
+      <span>Name is: Anna </span>
+      <span>Age is: 42</span>
     </div>
   );
 }
@@ -19,8 +21,8 @@ function ComponentTwo(props) {
 function App() {
   return (
     <div >
-      <ComponentOne />
-      <ComponentTwo />
+      <UserJan />
+      <UserAnna />
     </div>
   );
 }
