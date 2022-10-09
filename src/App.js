@@ -10,19 +10,23 @@ function IncreaseAgeButton(props) {
 }
 
 function User(props) {
-  const [age, setAge] = useState(props.age);
+  const [user, setUser] = useState({
+    age: props.age,
+    name: props.name
+  });
+  console.log('User start', user);
 
   function onIncreaseButtonClicked(e, noOfYears) {
-    console.log('onIncreaseButtonClicked', noOfYears);
-    setAge(age + noOfYears);
+    setUser(prevUser => ({
+      ...prevUser,
+      age: 23
+    }));
   }
-
-  console.log('User start', age);
 
   return (
     <div>
-      <span>Name is: {props.name}. </span>
-      <span>Age is: {age} </span>
+      <span>Name is: {user.name}. </span>
+      <span>Age is: {user.age} </span>
       <IncreaseAgeButton onClick={onIncreaseButtonClicked}>
         Increase age
       </IncreaseAgeButton>
