@@ -27,7 +27,7 @@ function User(props) {
     <div>
       <span>Name is: {user.name}. </span>
       <span>Age is: {user.age} </span>
-      <IncreaseAgeButton onClick={onIncreaseButtonClicked}>
+      <IncreaseAgeButton onClick={(e) => onIncreaseButtonClicked(e, 2)}>
         Increase age
       </IncreaseAgeButton>
     </div>

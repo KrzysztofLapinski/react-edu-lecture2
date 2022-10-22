@@ -22,8 +22,8 @@ age = 26;
 age = '26';
 
 let nullableAge: string | null;
-age = 26;
-age = '26';
+nullableAge = null;
+nullableAge = '26';
 
 let multipleTypes: string | number | boolean;
 multipleTypes = 'name';
